@@ -1,6 +1,10 @@
 name: My example workflow
 
 # When should this run?
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
 on:
   pull_request:
     branch:
@@ -8,6 +12,14 @@ on:
 
 # What should this do?
 jobs:
+<<<<<<< HEAD
+  example-workflow:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Say hello
+      run: echo "Hello world"
+=======
   example_workflow:
     runs-on: ubuntu-latest
 
@@ -15,3 +27,4 @@ jobs:
       - name: Say hello
         run: echo "Hello world"
     
+>>>>>>> main

@@ -1,9 +1,12 @@
-name: Test Python files
+name: Test python files
 
+# When do we want this to run?
 on:
   pull_request:
     branch:
       - main
+
+# What do we want this to do?
 
 jobs:
   run_tests:
@@ -11,10 +14,10 @@ jobs:
 
     steps:
     - name: Checkout repository (clone repo into virtual machine)
-      uses: action/checkout@v3
+      uses: actions/checkout@v3
     - name: Install python to the virtual machine
-      uses: action/setup-python
+      uses: actions/setup-python@v4.6.0
     - name: Install our requirements
-      run: pip3 install -r requirements.txt
-    - name: Run run_tests
+      run: pip install -r requirements.txt
+    - name: Run tests
       run: pytest
