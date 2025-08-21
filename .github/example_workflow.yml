@@ -8,7 +8,7 @@ on:
 
 # What should this do?
 jobs:
-  example workflow:
+  example_workflow:
     runs-on: ubuntu-latest
 
     steps:
